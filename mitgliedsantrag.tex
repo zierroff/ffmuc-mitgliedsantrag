@@ -1,0 +1,50 @@
+% !TeX root = ipv4-Aufgaben.tex
+
+\include{heads/texhead}
+\include{heads/color}
+
+
+\begin{document}
+\layout
+\clearscrheadfoot
+\ihead{\color{moohead}{\huge
+Freie Netze München e.V.\\ \vspace{2mm} Mitgliedsantrag
+}}
+\ohead{\includegraphics[width=3cm]{bilder/logo2.pdf}}
+\ifoot{ \includegraphics[width=2.5cm]{bilder/by.pdf} \color{moofoot}\itshape \the\year\ Freie Netze München e.V.}
+ 
+Hiermit beantrage ich, 
+        \begin{Form}
+        \underline{\TextField[name=w-lastip,width=0.98\linewidth,bordercolor=]{}}
+        \end{Form}
+        Wohnhaft\par\smallskip\noindent
+        \begin{Form}
+        \underline{\TextField[name=w-slashthirteen,width=0.98\linewidth,bordercolor=]{}}
+        \end{Form} 
+    und will das nicht:\par\smallskip\noindent
+       \begin{Form}
+        \CheckBox[name=b-subnetmasks-a1]{255.255.255.240\,}\;\;\;\;
+        \CheckBox[name=b-subnetmasks-a2]{\textbackslash2\,}\;\;
+        \CheckBox[name=b-subnetmasks-a3]{255.255.0.252\,}\;\;
+        \CheckBox[name=b-subnetmasks-a4]{255.255.255.255\,}\;\;\par\smallskip 
+        \CheckBox[name=b-subnetmasks-a5]{255.255.254.128\,}\;\;
+        \CheckBox[name=b-subnetmasks-a6]{/16\,}\;\;
+        \CheckBox[name=b-subnetmasks-a7]{255.255.242.0\,}\;\;
+        \CheckBox[name=b-subnetmasks-a8]{255.255.255.192\,}\;\;
+        \end{Form}\par\smallskip\noindent
+        \begin{Form}
+        \underline{\TextField[name=w-twoparts,width=0.98\linewidth,bordercolor=]{}}
+        \end{Form}\par\smallskip\noindent
+        \begin{Form}
+        \CheckBox[name=b-osilevel-a1]{Nr\,1\,}\;\;
+        \CheckBox[name=b-osilevel-a2]{Nr\,2\,}\;\;
+        \CheckBox[name=b-osilevel-a3]{Nr\,3\,}\;\;
+        \CheckBox[name=b-osilevel-a4]{Nr\,4\,}\;\;
+        \CheckBox[name=b-osilevel-a5]{Nr\,5\,}\;\;
+        \CheckBox[name=b-osilevel-a6]{Nr\,6\,}
+        \CheckBox[name=b-osilevel-a7]{Nr\,7\,}\;\;
+        \CheckBox[name=b-osilevel-a8]{Nr\,8\,}\;\;
+        \end{Form}
+
+
+\end{document}

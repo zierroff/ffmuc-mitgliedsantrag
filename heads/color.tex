@@ -1,0 +1,115 @@
+%%%
+%%%
+%%%Farben die verwendet werden können:
+%%% Primary Color:
+%%%
+%%% Farbe1 blue
+\def\maincoloronenormal{66 42 173}
+\def\maincoloronedark{41 27 107}
+\def\maincoloroneultradark{16 10 42}
+\def\maincoloronelight{121 99 217}
+\def\maincoloroneultralight{184 173 235}
+%%% Farbe2 brown
+\def\maincolortwonormal{206 84 18}
+%\def\maincolortwodark{113 46 10} Orginal-Farbe
+\def\maincolortwodark{148 50 15}
+\def\maincolortwoultradark{42 22 10}
+\def\maincolortwolight{240 140 86}
+\def\maincolortwoultralight{247 191 161}
+%%%Farbe3 green 
+\def\maincolorthreenormal{145 169 61}
+\def\maincolorthreedark{85 101 27}
+\def\maincolorthreeultradark{52 66 0}
+\def\maincolorthreelight{195 218 114}
+\def\maincolorthreeultralight{221 234 174}
+%%%
+%%%
+%%%
+%%%Secondary Color
+\def\secondarycolorone{255 165 82}
+\def\secondarycolortwo{200 162 6}
+\def\secondarycolorthree{132 112 140}
+\def\secondarycolorfour{211 199 149}
+\def\secondarycolorfive{237 175 209}
+\def\secondarycolorsix{159 175 144}
+\def\secondarycolorseven{244 132 95}
+\def\secondarycoloreight{233 215 88}
+
+
+
+%%%      Allgemeine Farbdefinitionen; Überschriften und Dokumentübergreifendes. 
+%%%     Im Moment wird green als Hauptthema verwendet. 
+%%%
+
+
+
+\definecolor{colorsection}{RGB}{\maincolorthreedark} %Für ÜBerschriften 
+\definecolor{colorsubsection}{RGB}{\maincolorthreedark} %Für ÜBerschriften 
+\definecolor{colorparagraph}{RGB}{\maincoloronedark} %Für ÜBerschriften 
+
+%%%Kopf und Fuß
+\definecolor{moohead}{RGB}{\maincolorthreeultradark}
+\definecolor{moofoot}{RGB}{\maincolorthreeultradark}
+\setkomafont{headsepline}{\color{moohead}}
+\setkomafont{footsepline}{\color{moofoot}}
+
+\addtokomafont{section}{\color{colorsection}} %Für ÜBerschriften
+\addtokomafont{subsection}{\color{colorsubsection}} %Für ÜBerschriften
+\addtokomafont{paragraph}{\color{colorparagraph}} %Für ÜBerschriften
+
+\definecolor{mooparagraph}{RGB}{\maincoloronedark} 
+%%%
+%%% Highlight:
+\definecolor{moohighlight}{RGB}{\maincoloronenormal}
+\definecolor{mooimportant}{RGB}{\maincolortwonormal}
+\definecolor{mooemphasize}{RGB}{\maincolorthreenormal}
+
+%%% Host, NET, NEW-Net
+\definecolor{moohost}{RGB}{\maincoloronenormal}  
+\definecolor{moonet}{RGB}{\maincolortwodark}  
+\definecolor{moonewnet}{RGB}{\maincolortwonormal}  
+
+
+%%% Alice, Bob and Eve
+\definecolor{mooalice}{RGB}{\maincoloronenormal}  
+\definecolor{moobob}{RGB}{\maincolortwonormal}  
+
+%%%% Aufzählende Erklärungen
+\definecolor{moodescription}{RGB}{\maincolortwodark}
+\definecolor{mooenumerate}{RGB}{\maincolortwodark}
+
+%%% Hochzahlen %%%
+\definecolor{moonumber}{RGB}{\maincoloronenormal}  %middlered
+\definecolor{mooup}{RGB}{\maincolortwonormal}  %middlered
+\definecolor{moobasis}{RGB}{\maincolorthreenormal}
+
+
+%%%%%% Spizalkonfig für IPv4 Header 
+%\definecolor{mooup}{RGB}{255 110 110}
+\definecolor{mooversion}{RGB}{\secondarycolorsix} 
+\definecolor{moofragment}{RGB}{\secondarycolortwo} %lightpink
+\definecolor{moottl}{RGB}{\secondarycolorthree} % lightyellow
+\definecolor{mooprotocol}{RGB}{\secondarycolorfour} % lightblue
+\definecolor{moochecksum}{RGB}{\secondarycolorfive} % lightorange
+\definecolor{moosource}{RGB}{\secondarycolorone}  %lightlime
+\definecolor{moodestination}{RGB}{\secondarycoloreight}  %lightturk
+\definecolor{moobit}{RGB}{\maincolortwonormal}  %middlered
+
+\newcommand\fadingtext[3][]{%
+  \begin{tikzfadingfrompicture}[name=fading letter]
+    \node[text=transparent!0,inner xsep=0pt,outer xsep=0pt,#1] {#3};
+  \end{tikzfadingfrompicture}%
+
+  \begin{tikzpicture}[baseline=(textnode.base)]
+    \node[inner sep=0pt,outer sep=0pt,#1](textnode){\phantom{#3}}; 
+    \shade[path fading=fading letter,#2,fit fading=false]
+    (textnode.south west) rectangle (textnode.north east);% 
+  \end{tikzpicture}% 
+}
+
+
+
+
+%%% 2 schön zueinander passende Farben:
+% \definecolor{mooclientserver}{RGB}{255 100 0}  
+% \definecolor{mooserverclient}{RGB}{0 180 200}  

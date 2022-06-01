@@ -1,0 +1,97 @@
+\documentclass[
+fontsize=11pt,
+a4paper,
+headsepline=true,
+footsepline=true,
+headinclude=false,
+footinclude=false,
+headings=small,
+%DIV=10
+]{scrartcl}
+%Entwicklung
+\usepackage{layout} %Anzeigen der Dokumentenränder
+
+%\usepackage{amsmath}
+\usepackage{graphicx} % Bilder einfügen
+\usepackage{tikz} % Zeichenprogramm
+\usetikzlibrary{fadings}
+
+
+
+\usepackage[english,main=ngerman]{babel} %Sprachen die geladenwerden
+\usepackage{blindtext} %Dummytext
+
+\usepackage[utf8]{inputenc} % Sonderzeichen im Text 
+\usepackage{xcolor} % Farben
+\usepackage{listings} % Code soll nicht verändert werden
+\usepackage[autostyle=true]{csquotes} %Automatische Zitate
+\usepackage[hidelinks]{hyperref} % Klickbare Links
+%\usepackage{nameref} % extended links
+
+\usepackage{verbatim} %Kommentare
+\usepackage{bytefield} %% IPv4 and IPv6 Header
+\usepackage{wrapfig} % Text um Grafik
+\usepackage{multicol} % Mehrspaltig Tabellen Text ... 
+% \usepackage{tabularx} %Tabellen breite angeben evtl. besser mit resize verkleinern?
+\usepackage{colortbl} % Farben in Array Tabellen
+\usepackage{booktabs}  % Tabellen horizontale linien
+\usepackage{textcomp}  % Eurosymbole
+\usepackage{paracol} % Mehrspaltige Dokumente
+
+\usepackage{arydshln} % Arrys and Tabellen punkte und spalten verändern
+\usepackage{nicematrix} %Schönere Matrizen
+\usepackage{abraces} %Schönere Klammern
+
+%\begin{comment}  Benötigt für Ref in Tabellen:
+\makeatletter
+\let\orgdescriptionlabel\descriptionlabel
+\renewcommand*{\descriptionlabel}[1]{%
+  \let\orglabel\label
+  \let\label\@gobble
+  \phantomsection
+  \edef\@currentlabel{#1}%
+  %\edef\@currentlabelname{#1}%
+  \let\label\orglabel
+  \orgdescriptionlabel{#1}%
+}
+\makeatother
+%\end{comment}
+%\usepackage{amssymb}
+%\usepackage{amsfonts}
+%\usepackage{mdsymbol}
+\usepackage[T1]{fontenc}
+\usepackage[light,condensed]{roboto}
+\setkomafont{pageheadfoot}{\sffamily\roboto}
+\usepackage[defaultsans,scale=0.95]{opensans} %Default Schriftart
+\renewcommand{\seriesdefault}{l}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[LGRgreek]{mathastext} %Damit die Matheschriftart auch opensans ist. 
+\linespread{1.20}
+\usepackage{tgcursor} %Typewriter Schriftart
+\linespread{1.06}
+\usepackage{wasysym}
+
+%Seiteneinstellungen und Head Foot keine Ahnung warum so Selsam in der Lösung:work it
+\usepackage{scrlayer-scrpage}
+\ModifyLayer[addvoffset=-.6ex]{scrheadings.foot.above.line}
+\pagestyle{scrheadings}
+\voffset 2cm
+\headheight 1cm
+\textheight 18cm
+\RedeclareSectionCommand[
+  beforeskip=-.8\baselineskip,
+  afterskip=.5\baselineskip]{subsection}
+
+%LAtex Fehler: Damit die Matrix Spalten auch mehr wie Standard werden können.
+\setcounter{MaxMatrixCols}{20}
+\newcommand{\colorbitbox}[3]{%
+\rlap{\bitbox{#2}{\color{#1}\rule{\width}{\height}}}%
+\bitbox{#2}{#3}}
+\newcommand{\colorwordbox}[3]{%
+\rlap{\wordbox{#2}{\color{#1}\rule{\width}{\height}}}%
+\wordbox{#2}{#3}}
+
+\setlength\columnsep{1cm}
+
+
+\usepackage{mathtools}
