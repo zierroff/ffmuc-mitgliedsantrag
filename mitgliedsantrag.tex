@@ -1,17 +1,19 @@
-% !TeX root = ipv4-Aufgaben.tex
 
 \include{heads/texhead}
 \include{heads/color}
 
-
 \begin{document}
-%\layout % Damit man das Layout als erste Seite erhält
+%\layout % Damit man das Layout sieht
 \clearscrheadfoot
 \ihead{\color{moohead}{\huge
 Freie Netze München e.V.\\ \vspace{2mm} Mitgliedsantrag
 }}
 \ohead{\includegraphics[width=3cm]{bilder/logo2.pdf}}
-\ifoot{ \includegraphics[width=2.5cm]{bilder/by.pdf} \color{moofoot}\itshape \the\year\ Freie Netze München e.V.}
+\ifoot{\color{mooiban}IBAN: DE73 7025 0150 0029 4939 13 – Kreissparkasse München Starnberg Ebersberg\\
+BIC: BYLADEM1KMS \\
+\vspace{2mm}
+    \includegraphics[width=2.5cm]{bilder/by.pdf} \color{moofoot}\itshape \the\year\ Freie Netze München e.V.
+    }
  
 \begin{tabular}[h]{ll}
     \rule{0pt}{40pt} \huge{Name} & \huge{ \begin{Form}
@@ -20,46 +22,67 @@ Freie Netze München e.V.\\ \vspace{2mm} Mitgliedsantrag
         \end{Form}}  \\ \addlinespace[5pt]
 
     \huge{Vorname} & \huge{ \begin{Form}
-            \underline{\TextField[name=vorname,charsize = 14pt,width=0.7\linewidth,bordercolor=]{}}
+            \underline{\TextField[name=vorname,charsize = 14pt,width=0.7\linewidth,bordercolor={}]{}}
             \end{Form}} \\ \addlinespace[5pt]
 
     \huge{Strasse} & \huge{ \begin{Form}
-            \underline{\TextField[name=strasse,charsize = 14pt,width=0.7\linewidth,bordercolor=]{}}
+            \underline{\TextField[name=strasse,charsize = 14pt,width=0.7\linewidth,bordercolor={}]{}}
             \end{Form}} \\ \addlinespace[5pt]
 
     \huge{PLZ, Ort} & \huge{ \begin{Form}
-                \underline{\TextField[name=ort,charsize = 14pt,width=0.7\linewidth,bordercolor=]{}}
+                \underline{\TextField[name=ort,charsize = 14pt,width=0.7\linewidth,bordercolor={}]{}}
                 \end{Form}}\\ \addlinespace[5pt]
 
     \huge{Telefon} & \huge{ \begin{Form}
-                    \underline{\TextField[name=telefon,charsize = 14pt,width=0.7\linewidth,bordercolor=]{}}
+                    \underline{\TextField[name=telefon,charsize = 14pt,width=0.7\linewidth,bordercolor={}]{}}
                     \end{Form}} \\ \addlinespace[5pt]
     
     \huge{E-Mail} & \huge{ \begin{Form}
-                        \underline{\TextField[name=mail,charsize = 14pt,width=0.7\linewidth,bordercolor=]{}}
-                        \end{Form}} \\ \addlinespace[5pt]
-
-    \end{tabular}
-
-
- \begin{Form}
-        \CheckBox[name=b-subnetmasks-a1]{30\,€}\;\;\;\;
-        \CheckBox[name=b-subnetmasks-a1]{60\,€}\;\;\;\;
-        \end{Form}\par\smallskip\noindent
-
+                        \underline{\TextField[name=mail,charsize = 14pt,width=0.7\linewidth,bordercolor={}]{}}
+                        \end{Form}} \\ \addlinespace[20pt]
+    \multicolumn{2}{l}{\LARGE{Der Jahresbeitrag beträgt laut Beitragsordnung: }} \\  \addlinespace[8pt]
+    \multicolumn{2}{l}{
+        \LARGE{
         \begin{Form}
-        \underline{\TextField[name=w-twoparts,width=0.98\linewidth,bordercolor=]{}}
-        \end{Form}\par\smallskip\noindent
-        \begin{Form}
-        \CheckBox[name=b-osilevel-a1]{Nr\,1\,}\;\;
-        \CheckBox[name=b-osilevel-a2]{Nr\,2\,}\;\;
-        \CheckBox[name=b-osilevel-a3]{Nr\,3\,}\;\;
-        \CheckBox[name=b-osilevel-a4]{Nr\,4\,}\;\;
-        \CheckBox[name=b-osilevel-a5]{Nr\,5\,}\;\;
-        \CheckBox[name=b-osilevel-a6]{Nr\,6\,}
-        \CheckBox[name=b-osilevel-a7]{Nr\,7\,}\;\;
-        \CheckBox[name=b-osilevel-a8]{Nr\,8\,}\;\;
+        \CheckBox[name=erwachsen]{} 60\,€ für Erwachsene
         \end{Form}
+        }}\\  \addlinespace[8pt]
+     \multicolumn{2}{l}{
+        \LARGE{
+            \begin{Form}
+            \CheckBox[name=kind]{} 30\,€ für Minderjährige unter 18 Jahre
+            \end{Form}
+            }}
+       
+\end{tabular}\par
+\vspace{1cm}
+
+\Large{
+    \noindent Hiermit beantrage ich die Mitgliedschaft im Verein Freie Netze München e.V. und erkenne die jeweils
+gültige Vereinssatzung als bindend an. \par\noindent
+Der Mitgliedsbeitrag ist jährlich im voraus, jedoch bis spätestens zum 31.
+Januar des laufenden Jahres auf das unten genannte Konto zu entrichten. Bei
+Eintritt im Laufe eines Jahres ist der anteilige Beitrag pro Monat zu entrichten.
+Die Berechnung erfolgt monatsgenau, beginnend mit dem Monat in dem der
+Eintritt stattfindet.}
+\vspace{1.5cm}
+
+\begin{minipage}{0.4\textwidth}
+        \begin{Form}
+        \underline{\TextField[name=date,charsize = 14pt,width=0.8\linewidth,bordercolor={}]{}}
+        \end{Form}\par\noindent
+        \small{ Ort, Datum}
+
+
+    \end{minipage}
+    \begin{minipage}{0.8\textwidth}
+
+           \begin{Form}
+            \underline{\TextField[name=unterschrift,charsize = 14pt,width=0.7\linewidth,bordercolor={}]{}}
+            \end{Form}\par\noindent
+\small{Unterschrift; Erziehungsberichter bei Minderjährigen   } \end{minipage}
 
 
 \end{document}
+
+   

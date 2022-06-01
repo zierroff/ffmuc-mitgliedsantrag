@@ -6,7 +6,7 @@ footsepline=true,
 headinclude=false,
 footinclude=false,
 headings=small,
-%DIV=10
+DIV=12
 ]{scrartcl}
 %Entwicklung
 \usepackage{layout} %Anzeigen der Dokumentenränder
@@ -26,13 +26,14 @@ headings=small,
 \usepackage{listings} % Code soll nicht verändert werden
 \usepackage[autostyle=true]{csquotes} %Automatische Zitate
 \usepackage[hidelinks]{hyperref} % Klickbare Links und Forms
+%\usepackage{eforms}
 %\usepackage{nameref} % extended links
 
 \usepackage{verbatim} %Kommentare
 \usepackage{bytefield} %% IPv4 and IPv6 Header
 \usepackage{wrapfig} % Text um Grafik
 \usepackage{multicol} % Mehrspaltig Tabellen Text ... 
-% \usepackage{tabularx} %Tabellen breite angeben evtl. besser mit resize verkleinern?
+%\usepackage{tabularx} %Tabellen breite angeben evtl. besser mit resize verkleinern?
 \usepackage{colortbl} % Farben in Array Tabellen
 \usepackage{booktabs}  % Tabellen horizontale linien
 \usepackage{textcomp}  % Eurosymbole
@@ -69,15 +70,14 @@ headings=small,
 \linespread{1.20}
 \usepackage{tgcursor} %Typewriter Schriftart
 \linespread{1.06}
-\usepackage{wasysym}
+\usepackage{wasysym} %Symbole wie smily
 
-%Seiteneinstellungen und Head Foot keine Ahnung warum so Selsam in der Lösung:work it
+%Seiteneinstellungen für layout und Head Foot 
 \usepackage{scrlayer-scrpage}
 \ModifyLayer[addvoffset=-.6ex]{scrheadings.foot.above.line}
 \pagestyle{scrheadings}
-\voffset 2cm
-\headheight 1cm
-\textheight 18cm
+\voffset 2.5cm
+\textheight 20cm
 \RedeclareSectionCommand[
   beforeskip=-.8\baselineskip,
   afterskip=.5\baselineskip]{subsection}
