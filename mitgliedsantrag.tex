@@ -5,7 +5,7 @@
 
 
 \begin{document}
-\layout
+%\layout % Damit man das Layout als erste Seite erhält
 \clearscrheadfoot
 \ihead{\color{moohead}{\huge
 Freie Netze München e.V.\\ \vspace{2mm} Mitgliedsantrag
@@ -13,25 +13,40 @@ Freie Netze München e.V.\\ \vspace{2mm} Mitgliedsantrag
 \ohead{\includegraphics[width=3cm]{bilder/logo2.pdf}}
 \ifoot{ \includegraphics[width=2.5cm]{bilder/by.pdf} \color{moofoot}\itshape \the\year\ Freie Netze München e.V.}
  
-Hiermit beantrage ich, 
-        \begin{Form}
-        \underline{\TextField[name=w-lastip,width=0.98\linewidth,bordercolor=]{}}
-        \end{Form}
-        Wohnhaft\par\smallskip\noindent
-        \begin{Form}
-        \underline{\TextField[name=w-slashthirteen,width=0.98\linewidth,bordercolor=]{}}
-        \end{Form} 
-    und will das nicht:\par\smallskip\noindent
-       \begin{Form}
-        \CheckBox[name=b-subnetmasks-a1]{255.255.255.240\,}\;\;\;\;
-        \CheckBox[name=b-subnetmasks-a2]{\textbackslash2\,}\;\;
-        \CheckBox[name=b-subnetmasks-a3]{255.255.0.252\,}\;\;
-        \CheckBox[name=b-subnetmasks-a4]{255.255.255.255\,}\;\;\par\smallskip 
-        \CheckBox[name=b-subnetmasks-a5]{255.255.254.128\,}\;\;
-        \CheckBox[name=b-subnetmasks-a6]{/16\,}\;\;
-        \CheckBox[name=b-subnetmasks-a7]{255.255.242.0\,}\;\;
-        \CheckBox[name=b-subnetmasks-a8]{255.255.255.192\,}\;\;
+\begin{tabular}[h]{ll}
+    \rule{0pt}{40pt} \huge{Name} & \huge{ \begin{Form}
+        \underline{\TextField[
+            name=name,charsize = 14pt,width=0.7\linewidth,bordercolor=]{}}
+        \end{Form}}  \\ \addlinespace[5pt]
+
+    \huge{Vorname} & \huge{ \begin{Form}
+            \underline{\TextField[name=vorname,charsize = 14pt,width=0.7\linewidth,bordercolor=]{}}
+            \end{Form}} \\ \addlinespace[5pt]
+
+    \huge{Strasse} & \huge{ \begin{Form}
+            \underline{\TextField[name=strasse,charsize = 14pt,width=0.7\linewidth,bordercolor=]{}}
+            \end{Form}} \\ \addlinespace[5pt]
+
+    \huge{PLZ, Ort} & \huge{ \begin{Form}
+                \underline{\TextField[name=ort,charsize = 14pt,width=0.7\linewidth,bordercolor=]{}}
+                \end{Form}}\\ \addlinespace[5pt]
+
+    \huge{Telefon} & \huge{ \begin{Form}
+                    \underline{\TextField[name=telefon,charsize = 14pt,width=0.7\linewidth,bordercolor=]{}}
+                    \end{Form}} \\ \addlinespace[5pt]
+    
+    \huge{E-Mail} & \huge{ \begin{Form}
+                        \underline{\TextField[name=mail,charsize = 14pt,width=0.7\linewidth,bordercolor=]{}}
+                        \end{Form}} \\ \addlinespace[5pt]
+
+    \end{tabular}
+
+
+ \begin{Form}
+        \CheckBox[name=b-subnetmasks-a1]{30\,€}\;\;\;\;
+        \CheckBox[name=b-subnetmasks-a1]{60\,€}\;\;\;\;
         \end{Form}\par\smallskip\noindent
+
         \begin{Form}
         \underline{\TextField[name=w-twoparts,width=0.98\linewidth,bordercolor=]{}}
         \end{Form}\par\smallskip\noindent
