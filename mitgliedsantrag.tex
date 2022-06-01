@@ -16,28 +16,28 @@ BIC: BYLADEM1KMS \\
     }
  
 \begin{tabular}[h]{ll}
-    \rule{0pt}{40pt} \huge{Name} & \huge{ \begin{Form}
+    \rule{0pt}{40pt} \LARGE{Name/Firma} & \LARGE{ \begin{Form}
         \underline{\TextField[
             name=name,charsize = 14pt,width=0.7\linewidth,bordercolor=]{}}
         \end{Form}}  \\ \addlinespace[5pt]
 
-    \huge{Vorname} & \huge{ \begin{Form}
-            \underline{\TextField[name=vorname,charsize = 14pt,width=0.7\linewidth,bordercolor={}]{}}
-            \end{Form}} \\ \addlinespace[5pt]
+   % \LARGE{Vorname} & \LARGE{ \begin{Form}
+   %         \underline{\TextField[name=vorname,charsize = 14pt,width=0.7\linewidth,bordercolor={}]{}}
+   %         \end{Form}} \\ \addlinespace[5pt]
 
-    \huge{Strasse} & \huge{ \begin{Form}
+    \LARGE{Strasse} & \LARGE{ \begin{Form}
             \underline{\TextField[name=strasse,charsize = 14pt,width=0.7\linewidth,bordercolor={}]{}}
             \end{Form}} \\ \addlinespace[5pt]
 
-    \huge{PLZ, Ort} & \huge{ \begin{Form}
+    \LARGE{PLZ, Ort} & \LARGE{ \begin{Form}
                 \underline{\TextField[name=ort,charsize = 14pt,width=0.7\linewidth,bordercolor={}]{}}
                 \end{Form}}\\ \addlinespace[5pt]
 
-    \huge{Telefon} & \huge{ \begin{Form}
+    \LARGE{Telefon} & \LARGE{ \begin{Form}
                     \underline{\TextField[name=telefon,charsize = 14pt,width=0.7\linewidth,bordercolor={}]{}}
                     \end{Form}} \\ \addlinespace[5pt]
     
-    \huge{E-Mail} & \huge{ \begin{Form}
+    \LARGE{E-Mail} & \LARGE{ \begin{Form}
                         \underline{\TextField[name=mail,charsize = 14pt,width=0.7\linewidth,bordercolor={}]{}}
                         \end{Form}} \\ \addlinespace[20pt]
     \multicolumn{2}{l}{\LARGE{Der Jahresbeitrag beträgt laut Beitragsordnung: }} \\  \addlinespace[8pt]
@@ -46,14 +46,22 @@ BIC: BYLADEM1KMS \\
         \begin{Form}
         \CheckBox[name=erwachsen]{} 60\,€ für Erwachsene
         \end{Form}
-        }}\\  \addlinespace[8pt]
-     \multicolumn{2}{l}{
-        \LARGE{
-            \begin{Form}
-            \CheckBox[name=kind]{} 30\,€ für Minderjährige unter 18 Jahre
-            \end{Form}
-            }}
-       
+        \begin{Form}
+            \CheckBox[name=kind]{} 30\,€ für Minderjährige
+        \end{Form}
+        }}\\  \addlinespace[12pt]     
+            \multicolumn{2}{l}{\LARGE{Ich wünsche eine Spendenmitgliedschaft in Höhe von }} \\  \addlinespace[8pt]
+            \multicolumn{2}{l}{
+                \LARGE{
+                \begin{Form}
+                \CheckBox[name=spender]{} 250\,€ 
+                \end{Form}
+                bezw. 
+                \begin{Form}
+                    \underline{\TextField[name=spender2,charsize = 14pt,width=0.1\linewidth,bordercolor={}]{}}€
+                    \end{Form}
+                }}
+
 \end{tabular}\par
 \vspace{1cm}
 
