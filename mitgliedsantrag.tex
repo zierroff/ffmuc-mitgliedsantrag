@@ -11,38 +11,48 @@ Freie Netze München e.V.\\ \vspace{5mm} Mitgliedsantrag
 \ohead{\includegraphics[width=3cm]{bilder/logo2.pdf}}
 \ifoot{\color{moofoot}Freie Netze München e.V.\,\, Parkstraße 28\,\, 82131 Gauting \\ E-Mail: vorstand@ffmuc.net\\
 \color{mooiban}IBAN: DE73 7025 0150 0029 4939 13 – Kreissparkasse München Starnberg Ebersberg\\
-BIC: BYLADEM1KMS     }
+BIC: BYLADEM1KMS}
  
+\minisec{} %Damit die Einrückung für die Tabelle verhindert wird.
 \begin{tabular}[h]{ll}
-    \LARGE{Name\,/\,Firma} & \LARGE{ \begin{Form}
-        \underline{\TextField[
-            name=name,charsize = 14pt,width=0.67\linewidth,bordercolor=]{}}
-        \end{Form}}  \\ \addlinespace[5pt]
+     \LARGE{Name\,/\,Firma} & \LARGE{ \begin{Form}
+            \underline{\raisebox{-5pt}{
+                \TextField[
+            name=name,charsize = 14pt,width=0.67\linewidth,bordercolor={}]{}}}
+            \end{Form}}  \\ \addlinespace[5pt]
 
    % \LARGE{Vorname} & \LARGE{ \begin{Form}
    %         \underline{\TextField[name=vorname,charsize = 14pt,width=0.7\linewidth,bordercolor={}]{}}
    %         \end{Form}} \\ \addlinespace[5pt]
 
     \LARGE{Strasse} & \LARGE{ \begin{Form}
-            \underline{\TextField[name=strasse,charsize = 14pt,width=0.67\linewidth,bordercolor={}]{}}
+            \underline{\raisebox{-5pt}{
+                \TextField[
+                name=strasse,charsize = 14pt,width=0.67\linewidth,bordercolor={}]{}}}
             \end{Form}} \\ \addlinespace[5pt]
 
     \LARGE{PLZ, Ort} & \LARGE{ \begin{Form}
-            \underline{\TextField[name=ort,charsize = 14pt,width=0.67\linewidth,bordercolor={}]{}}
+            \underline{\raisebox{-5pt}{
+                \TextField[
+                name=ort,charsize = 14pt,width=0.67\linewidth,bordercolor={}]{}}}
             \end{Form}}\\ \addlinespace[5pt]
 
     \LARGE{Telefon} & \LARGE{ \begin{Form}
-            \underline{\TextField[name=telefon,charsize = 14pt,width=0.67\linewidth,bordercolor={}]{}}
+            \underline{\raisebox{-5pt}{
+                \TextField[
+                name=telefon,charsize = 14pt,width=0.67\linewidth,bordercolor={}]{}}}
             \end{Form}} \\ \addlinespace[5pt]
 
     \LARGE{Geburtsdatum} & \LARGE{ \begin{Form}
-            \underline{\TextField[name=geburtstag,charsize = 14pt,width=0.67\linewidth,bordercolor={}]{}}
+            \underline{\raisebox{-5pt}{
+                \TextField[name=geburtstag,charsize = 14pt,width=0.67\linewidth,bordercolor={}]{}}}
             \end{Form}} \\ \addlinespace[5pt]
 
     \LARGE{E-Mail} & \LARGE{ \begin{Form}
-            \underline{\TextField[name=mail,charsize = 14pt,width=0.67\linewidth,bordercolor={}]{}}
+            \underline{\raisebox{-5pt}{
+                \TextField[
+                name=mail,charsize = 14pt,width=0.67\linewidth,bordercolor={}]{}}}
             \end{Form}} \\ \addlinespace[20pt]
-
 
 
     \multicolumn{2}{l}{\LARGE{Der Jahresbeitrag beträgt laut Beitragsordnung: }} \\  \addlinespace[8pt]
@@ -51,21 +61,22 @@ BIC: BYLADEM1KMS     }
         \begin{Form}
         \CheckBox[name=erwachsen]{} 60\,€ für Erwachsene
         \end{Form}
+        \,\,\,\,\,\,\,\,\,\,\,
         \begin{Form}
             \CheckBox[name=kind]{} 30\,€ für Minderjährige
         \end{Form}
         }}\\  \addlinespace[12pt]     
-            \multicolumn{2}{l}{\LARGE{Ich wünsche eine Fördermitgliedschaft in Höhe von }} \\  \addlinespace[8pt]
-            \multicolumn{2}{l}{
-                \LARGE{
-                \begin{Form}
-                \CheckBox[name=spender]{} 250\,€ 
-                \end{Form}
-                bezw.\,\,
-                \begin{Form}
-                    \underline{\TextField[name=spender2,charsize = 14pt,width=0.1\linewidth,bordercolor={}]{}}\,€
-                    \end{Form}
-                }}
+    \multicolumn{2}{l}{\LARGE{Ich wünsche eine Fördermitgliedschaft in Höhe von }} \\  \addlinespace[8pt]
+    \multicolumn{2}{l}{
+        \LARGE{
+        \begin{Form}
+            \CheckBox[name=spender]{} 250\,€ 
+        \end{Form}
+        \,\,\,bezw.\,\,\,\,\,
+        \begin{Form}
+            \underline{\TextField[name=spender2,charsize = 14pt,width=0.1\linewidth,bordercolor={}]{}}\,€
+        \end{Form}
+            }}
 
 \end{tabular}\par
 \vspace{1cm}
@@ -87,13 +98,14 @@ Eintritt stattfindet.}\par\noindent
         \small{ Ort, Datum}
 
 
-    \end{minipage}
-    \begin{minipage}{0.8\textwidth}
+\end{minipage}
+\begin{minipage}{0.8\textwidth}
 
            \begin{Form}
             \underline{\TextField[name=unterschrift,charsize = 12pt,width=0.7\linewidth,bordercolor={}]{}}
             \end{Form}\par\noindent
-\small{Unterschrift; Erziehungsberechtigter bei Minderjährigen   } \end{minipage}
+\small{Unterschrift; Erziehungsberechtigter bei Minderjährigen } 
+\end{minipage}
 
 \end{document}
 
